@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section id="index_services" class="services section-bg">
+    <div class="container">
+        <h1 align="center">Django File Upload Save to Mysql Database</h1>
+        </p>
+
+        {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for message in messages %}
+            <b>{{message}}</b>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-12">
+                    <form method="POST" class="post-form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <tr>
+                            <th><label for="id_Date_Register">Date Register:</label></th>
+                            <td>
+                                <input type="text" name="Date_Register" class="form-control" required
+                                    id="id_Date_Register">
+                            </td>
+                        </tr>
+
+                        <div class="container" style="margin: 50px">
+                            <div style="position: relative">
+                                <input class="form-control" type="text" id="time" />
+                            </div>
+                        </div>
+                        <script>$('#time').datetimepicker({
+                                format: 'yyyy-mm-dd'
+                            });
+                        </script>
+
+                        <div class="col-5">
+                            <div class="input-group date" id="datepicker">
+                                <input type="text" class="form-control" id="date" />
+                                <span class="input-group-append">
+                                    <span class="input-group-text bg-light d-block">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <script>$(function () {
+                                $('#datepicker').datepicker();
+                            });</script>
+
+                        <tr>
+                            <th><label for="id_Date_Act_Notice">Date Act Notice:</label></th>
+                            <td>
+                                <input type="text" name="Date_Act_Notice" class="form-control" required
+                                    id="id_Date_Act_Notice">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="id_Date_Act_Use">Date Act Use:</label></th>
+                            <td>
+                                <input type="text" name="Date_Act_Use" class="form-control" required
+                                    id="id_Date_Act_Use">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="id_Act_Name">Enter Act Name:</label></th>
+                            <td>
+                                <input type="text" name="Act_Name" maxlength="100" class="form-control" required
+                                    id="id_Act_Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="id_Act_Type">Act Type:</label></th>
+                            <td>
+                                <textarea name="Act_Type" cols="40" rows="10" class="form-control" required
+                                    id="id_Act_Type"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="id_Act_Status">Act Status:</label></th>
+                            <td>
+                                <textarea name="Act_Status" cols="40" rows="10" class="form-control" required
+                                    id="id_Act_Status"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input type="file" name="file" class="form-control" required id="id_file">
+                            </td>
+                        </tr>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

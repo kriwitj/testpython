@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section id="index_services" class="services section-bg">
+    <div class="container">
+<h2 align="center">ค้นหาครุภัณฑ์</h2>
+
+{% if messages %}
+<div class="alert alert-danger" role="alert">
+    {% for message in messages %}
+    <b>{{message}}</b>
+{% endfor %}
+  </div>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="">ค้นหาครุภัณฑ์</label>
+        <input type = "text" class="form-control" name = "ค้นหาครุภัณฑ์" placeholder="กรอกข้อมูลที่ต้องการค้นหา">
+    </div>
+
+   <input type="submit" value="ค้นหาครุภัณฑ์" class="btn btn-primary">
+    <!-- <button>Submit</button> -->
+
+</form>
+    </div>
+</section>
+
+
+{% endblock %}

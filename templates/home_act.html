@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block content%}
+<section id="index_services" class="services section-bg">
+  <div class="container">
+<h2 align="center">พรบ. สำนักงานสถิติแห่งชาติ</h2>
+<table class="table table-striped table-hover align-middle">
+    <thead class="table-dark align-middle">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">วันที่ลงทะเบียน</th>
+        <th scope="col">หมายเลขครุภัณฑ์</th>
+        <th scope="col">ชนิดอุปกรณ์</th>
+        <th scope="col">รายละเอียดอุปกรณ์</th>
+        <th scope="col">ระบบปฏิบัติการ</th>
+        <th scope="col">ผู้รับผิดชอบ</th>
+        <th scope="col">ซอฟท์แวร์ที่ใช้งาน</th>
+        <th scope="col">สถานะ</th>
+        <th scope="col">Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for act in acts %}
+      <tr>
+        <th scope="row">{{act.Act_Name_TH}}</th>
+        <td>{{act.Act_Name_TH}}</td>
+        <td>{{act.Act_Name_TH}}</td>
+        <td>{{act.Act_Name_TH}}</td>
+        <td>{{act.Act_Name_TH}}</td>
+        <td>{{act.Act_Name_TH}}</td>
+        <td>{{act.Act_Name_TH}}</td>
+        <td>{{act.Act_Name_TH}}</td>
+        <td>{{act.file}}</td>
+        <td>
+          <a href="{{ act.file.url }}" class="btn btn-primary btn-sm">
+            Download PDF Files
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  </section>
+  
+{% endblock %}

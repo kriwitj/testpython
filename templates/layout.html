@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ครุภัณฑ์ ออนไลน์ - สำนักงานสถิติแห่งชาติ</title>
+    <link href="/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script> -->
+
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/icofont/icofont.min.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+    <link rel="stylesheet" href="/static/assets/vendor/venobox/venobox.css">
+    <link rel="stylesheet" href="/static/assets/vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/aos/aos.css">
+    <!-- <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script> -->
+    
+    <!--Add Font Noto San serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    
+    <!-- Template Main CSS File -->
+    <!-- <link rel="stylesheet" href="/static/assets/css/style.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <!-- <style>
+      * {
+          font-family: 'Noto Sans Thai', sans-serif;
+      }
+    </style> -->
+    <!-- <link rel="stylesheet" href="/static/assets/css/main.css"> -->
+  </head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><i class="bi bi-buildings-fill"></i> E-ครุภัณฑ์</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-pc-display-horizontal"></i> ข้อมูลครุภัณฑ์
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/register_item">เพิ่มข้อมูลครุภัณฑ์ใหม่</a></li>
+                <li><a class="dropdown-item" href="/edit_item">เปลี่ยนแปลง/แก้ไขข้อมูลครุภัณฑ์</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/page1">ค้นหาครุภัณฑ์</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-disc"></i> ข้อมูลซอฟท์แวร์
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/register_item">เพิ่มข้อมูลซอฟท์แวร์</a></li>
+                <li><a class="dropdown-item" href="/edit_item">เปลี่ยนแปลง/แก้ไขข้อมูลซอฟท์แวร์</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+    
+              </ul>
+            </li>
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-journal-text"></i> พรบ. สำนักงานสถิติแห่งชาติ
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/home_act">สรุป รายการ พรบ.</a></li>
+                <li><a class="dropdown-item" href="/register_act">ลงทะเบียน พรบ. ที่เกี่ยวข้อง</a></li>
+                <li><a class="dropdown-item" href="/edit_act">เปลี่ยนแปลง/แก้ไขข้อมูล พรบ.</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hello, {{user.first_name}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout"><i class="bi bi-box-arrow-right"></i> ออกจากระบบ</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/loginForm"><i class="bi bi-house-fill"></i> เข้าสู่ระบบ</a>
+            </li>
+            {%endif%}
+          </ul>
+    
+    
+    
+        </div>
+      </div>
+    </nav>
+    
+    <!-- <div class="container"> -->
+    
+      {% block content %}
+      {% endblock%}
+    
+    <!-- </div> -->
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร สำนักงานสถิติแห่งชาติ
+          </h6>
+          <p>
+            เว็บไซท์สำหรับรวบรวมข้อมูลที่จำเป็นภายใน ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร สำนักงานสถิติแห่งชาติ
+            เพื่อความเป็นหนึ่งเดียวในอนาคต
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<!-- START Bootstrap-Cookie-Alert -->
+<div class="alert text-center cookiealert" role="alert" style="font-size: small;">
+  สำนักงานสถิติแห่งชาติ ใช้คุกกี้ (Cookies) เพื่อจัดการข้อมูลส่วนบุคคลและพัฒนาประสบการณ์การใช้งานให้กับผู้ใช้ในการได้รับการเสนอข้อมูลและเนื้อหาต่างๆ โดยการเข้าใช้งานเว็บไซต์นี้ถือว่าท่านได้อนุญาตให้เราใช้คุกกี้ตาม เงื่อนไขการใช้งานเว็บไซต์ และ นโยบายสิทธิส่วนบุคคลของเรา
+  <a href="https://cookiesandyou.com/" target="_blank">เรียนรู้เพิ่มเติม</a>
+
+  <button type="button" class="btn btn-primary btn-sm acceptcookies">
+          ยอมรับ
+      </button>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="/static/assets/vendor/php-email-form/validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.js"></script>
+<script src="/static/assets/vendor/venobox/venobox.min.js"></script>
+<script src="/static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/static/assets/vendor/aos/aos.js"></script>
+<script src="/static/assets/vendor/glightbox/js/glightbox.js"></script>
+<!-- <script src="assets/js/autocomp.js"></script> -->
+<!-- Template Main JS File -->
+<script src="/static/assets/js/main.js"></script>
+
+</body>
+</html>
+
+
+<!-- {% if user.is_authenticated %}
+<li class="nav-item">
+  <a class="nav-link" href="#">Hello, {{user.first_name}}</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/logout">LOGOUT</a>
+</li>
+{% else %}
+<li class="nav-item">
+  <a class="nav-link" href="/createForm">ลงทะเบียน</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/loginForm">loging ใช้งานนะ</a>
+</li>
+{%endif%} -->

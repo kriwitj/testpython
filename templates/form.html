@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section id="index_services" class="services section-bg">
+    <div class="container">
+        <h2 align="center">ลงทะเบียน</h2>
+
+        {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for message in messages %}
+            <b>{{message}}</b>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form action="/addForm" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="">ชื่อผู้เข้าใช้</label>
+                <input type="text" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+                <label for="">ชื่อ</label>
+                <input type="text" class="form-control" name="firstname">
+            </div>
+            <div class="form-group">
+                <label for="">นามสกุล</label>
+                <input type="text" class="form-control" name="lastname">
+            </div>
+            <div class="form-group">
+                <label for="">E-Mail</label>
+                <input type="text" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label for="">รหัสผ่าน</label>
+                <input type="text" class="form-control" name="password">
+            </div>
+            <div class="form-group">
+                <label for="">ยืนยันรหัสผ่าน</label>
+                <input type="text" class="form-control" name="repassword">
+            </div>
+            <p></p>
+            <input type="submit" value="ลงทะเบียน" class="btn btn-primary">
+            <!-- <button>Submit</button> -->
+
+        </form>
+    </div>
+</section>
+
+{% endblock %}
